@@ -1,3 +1,27 @@
+<!-- EVENTOS DINAMICOS -->
+<h1>Eventos</h1>
+<button [disabled]= "btnDisable">Enviar</button>
+<button (click)="toggleButton()">Toggle button</button>
+<p>Edad {{person.age}}</p>
+<button (click)="increadeAge()">Age ++</button>
+<div class="box" (scroll)="onScroll($event)">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sed quae magni officiis quis autem exercitationem ipsam odio recusandae dolorum, maiores itaque quod nisi natus a ullam facere consectetur ducimus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ratione? Eaque aut saepe nostrum impedit nam itaque. Distinctio quod, repellendus labore libero earum neque exercitationem laborum dolore optio, unde consequatur?</p>
+</div>
+<p><b>Nombre: </b> {{person.name}}</p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)">
+
+<!-- PROPIEDADES DINAMICAS -->
+<hr>
+<h1>Propiedades</h1>
+<button [disabled]= "btnDisable">Enviar</button>
+<input type="text" [value]="person.name">
+<progress max="100" [value] = "person.age"></progress><br><br>
+<img [src]="person.avatar" alt="image" width="200px">
+<hr>
+
+<!--  -->
 <h1>Hola mundo</h1>
 <h2>{{'Hola mundo'.repeat(5)}}</h2>
 <p>3+3 = {{3+3}}</p>
+<h3>Hola, soy {{name}} y tengo {{age}} años.</h3>
+<img src="{{img}}" alt="image" width="200px">
