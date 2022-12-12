@@ -1,3 +1,12 @@
+<!-- Ng model -->
+<h1>NgModel</h1>
+<p><b>Nombre: </b> {{person.name}}</p>
+<input type="text" #nameInput="ngModel" [(ngModel)]="person.name">
+<p>Valid: {{nameInput.valid}}</p>
+<p>Age: {{person.age}}</p>
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
+<p>Valid: {{ageInput.valid}}</p>
+
 <!-- EVENTOS DINAMICOS -->
 <h1>Eventos</h1>
 <button [disabled]= "btnDisable">Enviar</button>
