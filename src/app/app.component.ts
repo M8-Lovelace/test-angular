@@ -20,7 +20,6 @@ export class AppComponent {
 
   // names: (string | number)[] = [12, 'Laura', 'Ximena']
   names: string [] = [];
-  emojis = [ '😂' , '🐦', '🐳','🌮', '💚']
   newName = '';
   products: Product[] = [
     {
