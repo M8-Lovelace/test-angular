@@ -17,6 +17,11 @@ export class AppComponent {
     avatar :  'https://source.unsplash.com/random'
   }
 
+  // names: (string | number)[] = [12, 'Laura', 'Ximena']
+  names: string [] = [];
+  emojis = [ '😂' , '🐦', '🐳','🌮', '💚']
+  newName = '';
+
   toggleButton(){
     this.btnDisable = !this.btnDisable;
   }
@@ -33,5 +38,9 @@ export class AppComponent {
   changeName(event : Event){
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+
+  addName(){
+    this.names.push(this.newName);
   }
 }

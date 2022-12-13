@@ -1,3 +1,25 @@
+<!-- *ngFor -->
+<h1>*ngFor</h1>
+<input type="text" required [(ngModel)]="newName">
+<button (click)="addName()">Add name</button>
+<ul>
+  <li *ngIf="names.length == 0">No hay nombres en la lista</li>
+  <li *ngFor="let name of names; index as i">
+    {{i+1}} - {{name}} - {{emojis[i]}}
+  </li>
+</ul>
+<hr>
+
+<!-- *ngIf -->
+<h1>*ngIf</h1>
+<input type="text" required [(ngModel)]="person.name">
+<p *ngIf="person.name === 'Edwin'">Soy Edwin</p>
+<p *ngIf="person.name === 'Jesus' && person.age === 23; else elseBlock">Soy Jesus</p>
+<ng-template #elseBlock>
+  <p>Bloque de else</p>
+</ng-template>
+<hr>
+
 <!-- Ng model -->
 <h1>NgModel</h1>
 <p><b>Nombre: </b> {{person.name}}</p>
@@ -6,6 +28,7 @@
 <p>Age: {{person.age}}</p>
 <input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
 <p>Valid: {{ageInput.valid}}</p>
+<hr>
 
 <!-- EVENTOS DINAMICOS -->
 <h1>Eventos</h1>
