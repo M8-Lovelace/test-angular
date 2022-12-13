@@ -1,3 +1,32 @@
+<!-- *ngSwitch -->
+<h1>ngSwitch</h1>
+<input type="text" required [(ngModel)]="person.name">
+<div [ngSwitch]="person.name">
+  <p *ngSwitchCase="'Nicolas'">
+    La persona es Nicolas
+  </p>
+  <p *ngSwitchCase="'Edwin'">
+    La persona es Edwin
+  </p>
+  <p *ngSwitchCase="'Jesus'">
+    La persona es Jesus
+  </p>
+  <p *ngSwitchDefault>No hace match</p>
+</div>
+<hr>
+
+<!-- *ngFor Objects -->
+<h1>*ngFor Objects</h1>
+<div class="products--grid">
+  <div *ngFor=" let product of products">
+    <img [src]="product.image" alt="image" width="250">
+    <h2>{{product.price}}</h2>
+    <p>{{product.name}}</p>
+  </div>
+</div>
+<hr>
+
+
 <!-- *ngFor -->
 <h1>*ngFor</h1>
 <input type="text" required [(ngModel)]="newName">
@@ -5,7 +34,8 @@
 <ul>
   <li *ngIf="names.length == 0">No hay nombres en la lista</li>
   <li *ngFor="let name of names; index as i">
-    {{i+1}} - {{name}} - {{emojis[i]}}
+    {{i+1}} - {{name}}
+    <button (click)="deleteName(i)">Delete</button>
   </li>
 </ul>
 <hr>
