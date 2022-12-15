@@ -9,53 +9,61 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 15px;
+
   div {
-    img{
+    img {
       width: 100%;
       border-radius: 11px;
     }
-    h2, p{
+
+    h2,
+    p {
       margin: 0;
     }
   }
 }
 
-.message-error{
+.message-error {
   background-color: red;
   color: white;
   opacity: 0;
   transition: all linear .5s;
-  &.invalid{
+
+  &.invalid {
     opacity: 1;
   }
 }
 
-.line-error{
+.line-error {
   height: 0;
   border-bottom: 1px solid;
-  &.invalid{
+
+  &.invalid {
     border-color: red;
   }
-  &.valid{
+
+  &.valid {
     border-color: green;
   }
 }
 
-.styles{
+.styles {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  .styles-1{
+  grid-template-columns: repeat(2, 1fr);
+
+  .styles-1 {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-right: 30px;
-    input{
+
+    input {
       height: 25px;
       margin: 5px;
     }
   }
 }
 
-.formulario{
+.formulario {
   background-color: white;
   border: 2px solid black;
   border-radius: 20px;
@@ -65,32 +73,36 @@
   padding: 50px;
   margin-bottom: 50px;
   margin-top: 50px;
-  h1{
+
+  h1 {
     margin: 0 0 20px;
   }
 }
 
-.input-group{
-  input{
+.input-group {
+  input {
     width: 100%;
     height: 25px;
   }
-  p{
+
+  p {
     margin: 5px;
     opacity: 0;
     transition: all linear .5s;
-    &.invalid{
-      color:red;
+
+    &.invalid {
+      color: red;
       opacity: 1;
     }
   }
 }
 
-.buttons{
+.buttons {
   display: grid;
-  grid-template-columns: repeat(2,(1fr));
+  grid-template-columns: repeat(2, (1fr));
   margin-top: 25px;
-  button{
+
+  button {
     width: 70%;
     height: 30px;
     margin: 0 auto;
